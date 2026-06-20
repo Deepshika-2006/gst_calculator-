@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="calculator-card">
+
+        <div class="header">
+
+            <div class="logo">
+                <i class="fa-solid fa-receipt"></i>
+            </div>
+
+            <h1>GST Calculator</h1>
+
+            <p>
+                Calculate GST instantly with professional accuracy
+            </p>
+
+        </div>
+
+        <div class="form-section">
+
+            <div class="input-box">
+                <label>Amount (₹)</label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount">
+            </div>
+
+            <div class="input-box">
+                <label>GST Percentage</label>
+
+                <input
+                    type="number"
+                    id="gstRate"
+                    placeholder="Enter GST %">
+            </div>
+
+            <div class="input-box">
+                <label>Calculation Type</label>
+
+                <select id="calcType">
+
+                    <option value="exclusive">
+                        GST Exclusive
+                    </option>
+
+                    <option value="inclusive">
+                        GST Inclusive
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button
+                class="calculate-btn"
+                onclick="calculateGST()">
+
+                <i class="fa-solid fa-calculator"></i>
+                Calculate GST
+
+            </button>
+
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+                <h4>GST Amount</h4>
+                <span id="gstAmount">₹0.00</span>
+            </div>
+
+            <div class="result-card">
+                <h4>CGST</h4>
+                <span id="cgst">₹0.00</span>
+            </div>
+
+            <div class="result-card">
+                <h4>SGST</h4>
+                <span id="sgst">₹0.00</span>
+            </div>
+
+            <div class="result-card total-card">
+                <h4>Total Amount</h4>
+                <span id="totalAmount">₹0.00</span>
+            </div>
+
+        </div>
+
+        <div class="action-buttons">
+
+            <button
+                class="copy-btn"
+                onclick="copyResult()">
+
+                <i class="fa-solid fa-copy"></i>
+                Copy
+
+            </button>
+
+            <button
+                class="reset-btn"
+                onclick="resetFields()">
+
+                <i class="fa-solid fa-rotate"></i>
+                Reset
+
+            </button>
+
+        </div>
+
+        <div class="footer">
+            <p>Deepshika Garlapati</p>
+            <p>deepshikagarlapati@gmail.com</p>
+            <a
+                href="https://digitalheroesco.com"
+                target="_blank">
+
+                Built for Digital Heroes
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
